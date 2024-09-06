@@ -22,6 +22,8 @@ public class playerC0 : MonoBehaviour
     public float maxrotY;
     float camtilted;
 
+    public bool unturnable;
+
     public float colisionradius1;
     public float camdist;
 
@@ -47,7 +49,7 @@ public class playerC0 : MonoBehaviour
         orientation.forward = viewDir.normalized;
 
         //rotate model
-        if (inputDir != Vector3.zero)
+        if (inputDir != Vector3.zero && unturnable == false)
         {
             playermodel.forward = Vector3.Slerp(playermodel.forward, inputDir.normalized, Time.deltaTime * rotspeed);
         }

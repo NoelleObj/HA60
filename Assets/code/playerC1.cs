@@ -15,6 +15,8 @@ public class playerC1 : MonoBehaviour
     public float downjump;
     public float drag;
 
+    public bool unmovable;
+
     public float maxSlopeAngle;
     private RaycastHit slopehit;
 
@@ -43,7 +45,10 @@ public class playerC1 : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
         Move();
+
+        
 
     }
 
@@ -99,11 +104,7 @@ public class playerC1 : MonoBehaviour
             print("yay");
 
         }
-        if (Input.GetButtonDown("switch"))
-        {
-            playeranm.switche();
 
-        }
     }
 
     private void Move()

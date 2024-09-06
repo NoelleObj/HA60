@@ -32,6 +32,10 @@ public class playerAnimation : MonoBehaviour
     {
         anm.SetTrigger("switch");
     }
+    public void upswitch()
+    {
+        anm.SetTrigger("upswitch");
+    }
     public void punch()
     {
         anm.SetTrigger("punch");
