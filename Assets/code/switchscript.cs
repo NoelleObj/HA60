@@ -56,7 +56,7 @@ public class switchscript : MonoBehaviour
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
 
         switching = false;
         playerc0.unturnable = false;

@@ -25,6 +25,6 @@ public class switchColorChanger : MonoBehaviour
         {
             color -= 0.05f;
         }
-        mat.SetColor("_EmissionColor", new Color((1 - Mathf.Clamp(color, 0f, 1f)) * intensity, Mathf.Clamp(color, 0f, 1f) * intensity, 0f, 0f));
+        mat.SetColor("_EmissionColor", new Color((Mathf.Clamp(1 - color * 2, 0f, 1f)) * intensity, Mathf.Clamp(color, 0f, 1f) * intensity, 0f, 0f));
     }
 }

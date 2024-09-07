@@ -31,6 +31,18 @@ public class elevator : MonoBehaviour
     void Start()
     {
         door = false;
+        if (switchB == null)
+        {
+            switchB = switchA;
+        }
+        if (switchC == null)
+        {
+            switchC = switchA;
+        }
+        if (switchD == null)
+        {
+            switchD = switchA;
+        }
     }
 
     // Update is called once per frame

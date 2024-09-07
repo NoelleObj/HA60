@@ -1306,9 +1306,9 @@ MonoBehaviour:
   switchA: {fileID: 919132149053779562}
   switchB: {fileID: 1613676910}
   switchBenable: 1
-  switchC: {fileID: 919132149053779562}
+  switchC: {fileID: 0}
   switchCenable: 0
-  switchD: {fileID: 919132149053779562}
+  switchD: {fileID: 0}
   switchDenable: 0
   open: 0
   colider: {fileID: 1058604205}
@@ -1627,9 +1627,9 @@ MonoBehaviour:
   switchA: {fileID: 919132149053779562}
   switchB: {fileID: 1613676910}
   switchBenable: 1
-  switchC: {fileID: 919132149053779562}
+  switchC: {fileID: 0}
   switchCenable: 0
-  switchD: {fileID: 919132149053779562}
+  switchD: {fileID: 0}
   switchDenable: 0
   doorColider: {fileID: 245259146}
   doorRenderer: {fileID: 245259147}

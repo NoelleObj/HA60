@@ -19,7 +19,18 @@ public class door : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(switchB == null)
+        {
+            switchB = switchA;
+        }
+        if (switchC == null)
+        {
+            switchC = switchA;
+        }
+        if (switchD == null)
+        {
+            switchD = switchA;
+        }
     }
 
     // Update is called once per frame
