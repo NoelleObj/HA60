@@ -12,7 +12,7 @@ public class door : MonoBehaviour
     public switchscript switchD;
     public bool switchDenable;
 
-    public float open;
+    public bool open;
 
     public Collider colider;
     public Renderer renderer;
@@ -49,5 +49,6 @@ public class door : MonoBehaviour
 
         colider.enabled = false;
         renderer.enabled = false;
+        open = true;
     }
 }

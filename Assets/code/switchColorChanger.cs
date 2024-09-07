@@ -11,7 +11,7 @@ public class switchColorChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        color = -0.75f;
     }
 
     // Update is called once per frame
@@ -21,10 +21,10 @@ public class switchColorChanger : MonoBehaviour
         {
             color += 0.01f;
         }
-        if (switchscript.switched == false && color > 0f)
+        if (switchscript.switched == false && color > -0.75f)
         {
             color -= 0.05f;
         }
-        mat.SetColor("_EmissionColor", new Color((1 - color) * intensity, Mathf.Clamp(color * 2f - 1f, 0f, 1f) * intensity, 0f, 0f));
+        mat.SetColor("_EmissionColor", new Color((1 - Mathf.Clamp(color, 0f, 1f)) * intensity, Mathf.Clamp(color, 0f, 1f) * intensity, 0f, 0f));
     }
 }

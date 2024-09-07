@@ -40,7 +40,7 @@ public class switchscript : MonoBehaviour
             player.position = Vector3.Slerp(player.position, playertarget.position, Time.deltaTime * 3f);
             playermodel.forward = Vector3.Slerp(playermodel.forward, playertarget.up, Time.deltaTime * 10f);
 
-            if(Vector3.Distance(player.position, playertarget.position) < 0.1f && switchend == false)
+            if(Vector3.Distance(player.position, playertarget.position) < 0.3f && switchend == false)
             {
                 if(switched == false)
                 {
@@ -56,7 +56,7 @@ public class switchscript : MonoBehaviour
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         switching = false;
         playerc0.unturnable = false;
