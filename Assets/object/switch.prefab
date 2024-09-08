@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 9710cbb710bf10e4da9558513ebceb42, type: 2}
-  intensity: 2
+  intensity: 10
   switchscript: {fileID: 106152027714144372}
 --- !u!1 &3869594925109474296
 GameObject:
@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 8661929916789782692}
   m_LocalRotation: {x: 0.52913016, y: -0, z: -0, w: 0.84854066}
   m_LocalPosition: {x: -0, y: 0.0017030883, z: 0.074826725}
-  m_LocalScale: {x: 0.120745055, y: 1.5603291, z: 0.12074504}
+  m_LocalScale: {x: 0.1207451, y: 1.5603291, z: 0.12074504}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 734913676873994956}

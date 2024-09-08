@@ -23,6 +23,10 @@ public class playerAnimation : MonoBehaviour
     {
         anm.SetTrigger("jump");
     }
+    public void jumping()
+    {
+        anm.SetTrigger("jumping");
+    }
 
     public void land()
     {

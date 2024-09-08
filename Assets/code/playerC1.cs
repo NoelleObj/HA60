@@ -12,10 +12,10 @@ public class playerC1 : MonoBehaviour
     public float followoffset;
     public float speed;
     public float jumpforce;
-    public float downjump;
     public float drag;
 
-    public bool unmovable;
+    public float aerialDrag;
+    public float aerialSpeed;
 
     public float maxSlopeAngle;
     private RaycastHit slopehit;
@@ -29,35 +29,18 @@ public class playerC1 : MonoBehaviour
 
     float multiplier;
     bool jumping;
+    bool gonnaland;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveinput();
-        //camfollow.localPosition = new Vector3(rb.velocity.x * followoffset, 0f, rb.velocity.z * followoffset);
-        
-    }
-    private void FixedUpdate()
-    {
-
-        Move();
-
-        
-
-    }
-
-    private void moveinput()
-    {
-
-
-
-        //groundcheck
+        //groundcheck and drag
         grounded = Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Vector3.down, 1.2f);
         if (grounded)
         {
@@ -65,25 +48,32 @@ public class playerC1 : MonoBehaviour
         }
         else
         {
-            rb.drag = drag * 0.1f;
-
+            rb.drag = drag * aerialDrag;
         }
-        //jumpanims
+
+        //jump
         if (Input.GetKeyDown(KeyCode.Space) & grounded)
         {
+            grounded = false;
             jump();
             playeranm.jump();
             jumping = true;
         }
-
-        if(jumping && grounded)
+        if (jumping && rb.velocity.y < 0f)
         {
-            playeranm.land();
+            gonnaland = true;
+        }
+        if (jumping && grounded && gonnaland)
+        {
             jumping = false;
+            playeranm.land();
+            gonnaland = false;
         }
 
+
+
         //sprint
-        if (Input.GetKey(KeyCode.LeftShift) & grounded)
+        if (Input.GetKey(KeyCode.LeftShift) && grounded)
         {
             multiplier = 1.6f;
         }
@@ -91,19 +81,22 @@ public class playerC1 : MonoBehaviour
         {
             multiplier = 1f;
         }
-
-        if (!grounded)
+        //jumpspeed
+        if(!grounded)
         {
-            multiplier = 0.1f;
+            multiplier = aerialSpeed;
         }
 
         //punch
         if (Input.GetButtonDown("punch"))
         {
             playeranm.punch();
-            print("yay");
 
         }
+    }
+    private void FixedUpdate()
+    {
+        Move();
 
     }
 
