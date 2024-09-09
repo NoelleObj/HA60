@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cleanmetalswitch
+  m_Name: cleanmetal_switch
   m_Shader: {fileID: 4800000, guid: 77fa60414aaf3644591d55e42f9c2a63, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
