@@ -52,7 +52,7 @@ public class playerC1 : MonoBehaviour
         }
 
         //jump
-        if (Input.GetKeyDown(KeyCode.Space) & grounded)
+        if (Input.GetButtonDown("jump") & grounded)
         {
             grounded = false;
             jump();
@@ -73,7 +73,7 @@ public class playerC1 : MonoBehaviour
 
 
         //sprint
-        if (Input.GetKey(KeyCode.LeftShift) && grounded)
+        if (Input.GetButton("run") && grounded)
         {
             multiplier = 1.6f;
         }

@@ -75,25 +75,7 @@ public class elevator : MonoBehaviour
                 door = false;
             }
         }
-        if (elevating == true && elevated == false)
-        {
-            if(transform.position.y < finalHeight - 1f)
-            {
-                speed += 0.005f;
-            }
-            else
-            {
-                speed -= 0.0001f;
-            }
-            if (transform.position.y >= finalHeight)
-            {
-                speed = 0f;
-                elevated = true;
-            }
-            speed = Mathf.Clamp(speed, 0f, maxspeed);
-            transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z);
-            
-        }
+
 
         if(elevated == true)
         {
@@ -111,6 +93,29 @@ public class elevator : MonoBehaviour
         {
             doorColider.enabled = true;
             doorRenderer.enabled = true;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (elevating == true && elevated == false)
+        {
+            if (transform.position.y < finalHeight - 1f)
+            {
+                speed += 0.005f;
+            }
+            else
+            {
+                speed -= 0.0001f;
+            }
+            if (transform.position.y >= finalHeight)
+            {
+                speed = 0f;
+                elevated = true;
+            }
+            speed = Mathf.Clamp(speed, 0f, maxspeed);
+            transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z);
+
         }
     }
 }

@@ -1909,7 +1909,7 @@ MonoBehaviour:
   detector: {fileID: 1377330174}
   activationdistance: 1
   finalHeight: 20
-  maxspeed: 0.02
+  maxspeed: 0.03
 --- !u!64 &1377330176
 MeshCollider:
   m_ObjectHideFlags: 0
