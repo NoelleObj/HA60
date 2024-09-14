@@ -26,6 +26,10 @@ public class elevator : MonoBehaviour
     public float finalHeight;
     public float maxspeed;
 
+    public bool savepoint;
+    public float savepointpos;
+    float savefilepoint;
+
     float speed;
     // Start is called before the first frame update
     void Start()

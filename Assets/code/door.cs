@@ -16,6 +16,11 @@ public class door : MonoBehaviour
 
     public Collider colider;
     public Renderer renderer;
+
+    public bool savepoint;
+    public float savepointpos;
+    float savefilepoint;
+
     // Start is called before the first frame update
     void Start()
     {
