@@ -30,11 +30,12 @@ public class playerC1 : MonoBehaviour
     float multiplier;
     bool jumping;
     bool gonnaland;
+    bool truejump;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+      grounded = true;
     }
 
     // Update is called once per frame
@@ -58,6 +59,7 @@ public class playerC1 : MonoBehaviour
             jump();
             playeranm.jump();
             jumping = true;
+            truejump = true;
         }
         if (jumping && rb.velocity.y < 0f)
         {
@@ -68,6 +70,7 @@ public class playerC1 : MonoBehaviour
             jumping = false;
             playeranm.land();
             gonnaland = false;
+            truejump = false;
         }
 
 
@@ -93,6 +96,11 @@ public class playerC1 : MonoBehaviour
             playeranm.punch();
 
         }
+        if(rb.velocity.y < 0f && grounded == false && jumping == false && truejump == false){
+            playeranm.jumping();
+            jumping = true;
+            gonnaland = true;
+        }
     }
     private void FixedUpdate()
     {
@@ -107,7 +115,7 @@ public class playerC1 : MonoBehaviour
         float hInput = Input.GetAxisRaw("Horizontal");
         if (onslope())
         {
-            rb.AddForce(GetSlopeMoveDir() * speed * 10f, ForceMode.Force);
+            rb.AddForce(GetSlopeMoveDir() * speed * 5f, ForceMode.Force);
         }
         moveDirection = orientation.forward * vInput + orientation.right * hInput;
         rb.AddForce(moveDirection.normalized * speed * 10f * multiplier, ForceMode.Force);
