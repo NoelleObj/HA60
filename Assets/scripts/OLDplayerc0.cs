@@ -11,7 +11,6 @@ public class OLDplayerC0 : MonoBehaviour
     public Rigidbody rb;
    
     public float rotspeed;
-    bool help;
 
     Vector3 oldforward;
 
@@ -35,12 +34,10 @@ public class OLDplayerC0 : MonoBehaviour
         {
             print(orientation.forward);
             orientation.forward = oldforward;
-            help = true;
         }
         else
         {
             orientation.forward = viewDir.normalized;
-            help = false;
         }
 
 

@@ -31,6 +31,8 @@ public class elevator : MonoBehaviour
     float savefilepoint;
 
     float speed;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -98,15 +100,15 @@ public class elevator : MonoBehaviour
             doorColider.enabled = true;
             doorRenderer.enabled = true;
         }
-    }
 
-    void FixedUpdate()
-    {
+
         if (elevating == true && elevated == false)
         {
+
             if (transform.position.y < finalHeight - 1f)
             {
                 speed += 0.005f;
+                //player.parent = transform;
             }
             else
             {
@@ -118,8 +120,13 @@ public class elevator : MonoBehaviour
                 elevated = true;
             }
             speed = Mathf.Clamp(speed, 0f, maxspeed);
-            transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + speed *Time.deltaTime, transform.position.z);
 
         }
+    }
+
+    void FixedUpdate()
+    {
+
     }
 }
