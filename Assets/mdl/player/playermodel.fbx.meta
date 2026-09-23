@@ -1,49 +1,49 @@
 fileFormatVersion: 2
 guid: e020ad11bdb9b2443bc3eeb3df1409f4
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: blacktube
-    second: {fileID: 2100000, guid: 34a4d68735fd28947bbb9146f75ad355, type: 2}
+    second: {fileID: 2100000, guid: 27f8efa6175ffc247b00c663badfc1d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: browntown
-    second: {fileID: 2100000, guid: 4bfb490f8f5ec8b418c98cef139ed42c, type: 2}
+    second: {fileID: 2100000, guid: 27f8efa6175ffc247b00c663badfc1d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: cleanmetal
-    second: {fileID: 2100000, guid: d6f16640ec0413840875e430a02ed4ea, type: 2}
+    second: {fileID: 2100000, guid: 27f8efa6175ffc247b00c663badfc1d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: disc
-    second: {fileID: 2100000, guid: 876a97bc213c5a2428830d65aa71259b, type: 2}
+    second: {fileID: 2100000, guid: 27f8efa6175ffc247b00c663badfc1d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: fancymetal
-    second: {fileID: 2100000, guid: cfd46ad4644b57d429b2a0d2b33ffe4a, type: 2}
+    second: {fileID: 2100000, guid: 27f8efa6175ffc247b00c663badfc1d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: rust
-    second: {fileID: 2100000, guid: ba241c358b9dac845b06ba09e529eccc, type: 2}
+    second: {fileID: 2100000, guid: 27f8efa6175ffc247b00c663badfc1d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: rusttown.001
-    second: {fileID: 2100000, guid: ba241c358b9dac845b06ba09e529eccc, type: 2}
+    second: {fileID: 2100000, guid: 27f8efa6175ffc247b00c663badfc1d8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: screen
-    second: {fileID: 2100000, guid: a46e1fd565385434c92e29407ab0de06, type: 2}
+    second: {fileID: 2100000, guid: 1ed3b491c1ee8ab4f98b61f5dd7b87fc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -61,8 +61,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -335,6 +333,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8

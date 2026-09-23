@@ -45,11 +45,11 @@ public class playerC1 : MonoBehaviour
         grounded = Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Vector3.down, 1.2f);
         if (grounded)
         {
-            rb.drag = drag;
+            rb.linearDamping = drag;
         }
         else
         {
-            rb.drag = drag * aerialDrag;
+            rb.linearDamping = drag * aerialDrag;
         }
 
         //jump
@@ -61,7 +61,7 @@ public class playerC1 : MonoBehaviour
             jumping = true;
             truejump = true;
         }
-        if (jumping && rb.velocity.y < 0f)
+        if (jumping && rb.linearVelocity.y < 0f)
         {
             gonnaland = true;
         }
@@ -96,7 +96,7 @@ public class playerC1 : MonoBehaviour
             playeranm.punch();
 
         }
-        if(rb.velocity.y < 0f && grounded == false && jumping == false && truejump == false){
+        if(rb.linearVelocity.y < 0f && grounded == false && jumping == false && truejump == false){
             playeranm.jumping();
             jumping = true;
             gonnaland = true;

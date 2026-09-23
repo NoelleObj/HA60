@@ -51,7 +51,7 @@ public class playermovement : MonoBehaviour
     {
         moveinput();
         lastlastvel = lastVel;
-        lastVel = rb.velocity.y;
+        lastVel = rb.linearVelocity.y;
     }
 
     private void FixedUpdate()
@@ -69,11 +69,11 @@ public class playermovement : MonoBehaviour
         grounded = Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Vector3.down, 1.2f);
         if (grounded)
         {
-            rb.drag = drag;
+            rb.linearDamping = drag;
         }
         else
         {
-            rb.drag = 0;
+            rb.linearDamping = 0;
         }
 
 

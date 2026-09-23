@@ -15,8 +15,8 @@ public class playerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anm.SetFloat("speedpercent", rb.velocity.magnitude / 15f);
-        print(rb.velocity.magnitude);
+        anm.SetFloat("speedpercent", rb.linearVelocity.magnitude / 15f);
+        print(rb.linearVelocity.magnitude);
        
     }
     public void jump()
